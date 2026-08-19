@@ -1,0 +1,11 @@
+services:
+  portal_loja_glpi:
+    build: .
+    container_name: portal_loja_glpi
+    restart: always
+    ports:
+      - "5854:8501"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
